@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls), # The admin URL
+    path('', views.home, name='home'),
     path('', include('booking.urls')), # This will route requests to the booking app
     path('accounts/', include('allauth.urls')),
 ]
