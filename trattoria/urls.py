@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), # The admin URL
+    path('', include('booking.urls')), # This will route requests to the booking app
     path('accounts/', include('allauth.urls')),
 ]
