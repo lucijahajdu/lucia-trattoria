@@ -7,6 +7,6 @@ from . import views
 #]
 
 urlpatterns = [
-    path('bookings/', views.booking_list, name='booking_list'),
+    path('bookings/', views.PostDetail.as_view(), name='booking_list'),
     path('bookings/<int:booking_id>/', views.booking_detail, name='booking_detail'),
 ]

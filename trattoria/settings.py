@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'booking',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 SITE_ID = 1
@@ -67,6 +69,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'trattoria.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

@@ -1,4 +1,5 @@
 <!-- templates/booking/booking_list.html -->
+{% load crispy_forms_tags %}
 
 <h1>Booking List</h1>
 <ul>
@@ -6,3 +7,5 @@
     <li><a href="{% url 'booking_detail' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
   {% endfor %}
 </ul>
+
+{{ booking_form | crispy }}
