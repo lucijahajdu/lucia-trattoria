@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html class="h-100">
 
@@ -36,10 +37,10 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="#">My Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{% url 'booking_list' %}">Book a table</a>
                     </li>
 
                     {% if user.is_authenticated %}
