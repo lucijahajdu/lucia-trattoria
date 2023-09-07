@@ -1,0 +1,30 @@
+<!-- templates/booking/booking_list.html -->
+{% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
+
+
+<!--<ul>
+  {% for booking in bookings %}
+    <li><a href="{% url 'booking_detail' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
+  {% endfor %}
+</ul> -->
+{% if booked %}
+<div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
+    Your table reservation was successful!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% else %}
+{% if user.is_authenticated %}
+
+<h3>Please fill in the form to reserve a table</h3>
+
+<form method="post" style="margin-top: 3em;">
+    {{ form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-signup btn-lg">Confirm reservation</button>
+</form>
+{% endif %}
+{% endif %}
+
+
+{% endblock %}

@@ -3,11 +3,11 @@
 {% load crispy_forms_tags %}
 
 
-<!--<ul>
+<ul>
   {% for booking in bookings %}
     <li><a href="{% url 'booking_detail' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
   {% endfor %}
-</ul> -->
+</ul> 
 {% if booked %}
 <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
     Your table reservation was successful!

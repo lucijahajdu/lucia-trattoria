@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import generic, View
 from .models import Booking
 from .forms import BookingForm
+from django.urls import reverse_lazy
 
 #def home(request):
 #    return render(request, 'index.html')
@@ -15,14 +16,14 @@ class HomeView(View):
 class PostDetail(View):
 
     def get(self, request, *args, **kwargs):
-        bookings = Booking.objects.all()
+        bookings = Booking.objects.filter(user=request.user.id)
 
         return render(
             request,
             'bookings/booking_list.html',
             {
                 'bookings': bookings,
-                'booked' : False,
+                'booked': False,
                 'booking_form': BookingForm()
             },
         )
@@ -54,8 +55,9 @@ class PostDetail(View):
 
 class EditBooking(generic.UpdateView):
     model = Booking
-    template_name = 'bookings/booking_list.html'
+    template_name = 'bookings/edit-booking.html'
     success_url = '../{id}'
-    fields = '__all__'
+    form_class = BookingForm
 
-    booking_form = BookingForm()
+    def get_success_url(self):
+        return reverse_lazy('home', args=[str(self.object.id)])
