@@ -4,8 +4,13 @@ from django.views import generic, View
 from .models import Booking
 from .forms import BookingForm
 
-def home(request):
-    return render(request, 'index.html')
+#def home(request):
+#    return render(request, 'index.html')
+
+class HomeView(View):
+
+    def get(self,request):
+        return render(request, 'index.html')
 
 class PostDetail(View):
 
