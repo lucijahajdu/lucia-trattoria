@@ -10,5 +10,5 @@ from .views import HomeView, PostDetail
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('bookings/', views.PostDetail.as_view(), name='booking_list'),
-    path('bookings/<int:booking_id>/', PostDetail.as_view(), name='booking_detail'),
+    path('bookings/<pk>/', views.EditBooking.as_view(), name='edit-booking'),
 ]

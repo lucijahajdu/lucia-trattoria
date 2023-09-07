@@ -51,3 +51,11 @@ class PostDetail(View):
                 'booking_form': BookingForm()
             },
         )
+
+class EditBooking(generic.UpdateView):
+    model = Booking
+    template_name = 'bookings/booking_list.html'
+    success_url = '../{id}'
+    fields = '__all__'
+
+    booking_form = BookingForm()
