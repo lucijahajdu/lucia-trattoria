@@ -5,7 +5,7 @@
 
 <ul>
   {% for booking in bookings %}
-    <li><a href="{% url 'booking_detail' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
+    <li><a href="{% url 'edit-booking' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
   {% endfor %}
 </ul> 
 {% if booked %}

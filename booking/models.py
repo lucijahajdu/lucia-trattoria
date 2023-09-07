@@ -11,15 +11,10 @@ class Booking(models.Model):
     last_name = models.CharField(max_length=50, default='Adams')
     email = models.EmailField(default='example@email.com')
     requirements = models.CharField(max_length=200)
-    user = models.IntegerField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
 
     def __str__(self):
         return self.first_name
-
-class User(models.Model):
-    
-    username = models.CharField(max_length=80)
-    password = models.CharField(max_length=80)
 
 class Profile(models.Model):
     
@@ -27,4 +22,4 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=80, default='Adams')
     email = models.EmailField(default='example@email.com')
     requirements = models.CharField(max_length=200)
-    user = models.IntegerField()
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
