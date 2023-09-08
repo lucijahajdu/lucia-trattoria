@@ -20,6 +20,7 @@
     <h3>Please fill in the form to reserve a table</h3>
 
     <form method="post" class="booking-form">
+      {{ booking_form.time }}
       {{ booking_form | crispy }}
       {% csrf_token %}
       <button type="submit" class="btn btn-success btn-lg">Confirm reservation</button>

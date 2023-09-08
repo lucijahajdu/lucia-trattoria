@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 class Booking(models.Model):
     
-    guests = models.IntegerField()
+    guests = models.PositiveIntegerField()
     date = models.DateField()
     time = models.TimeField()
     first_name = models.CharField(max_length=50, default='John')

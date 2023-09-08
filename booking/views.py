@@ -19,6 +19,7 @@ class PostDetail(View):
 
     def get(self, request, *args, **kwargs):
         bookings = Booking.objects.filter(user=request.user.id)
+        booking_form = BookingForm()
 
         return render(
             request,
@@ -26,7 +27,7 @@ class PostDetail(View):
             {
                 'bookings': bookings,
                 'booked': False,
-                'booking_form': BookingForm()
+                'booking_form': booking_form,
             },
         )
 
