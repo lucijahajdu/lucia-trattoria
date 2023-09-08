@@ -180,7 +180,63 @@ h3 {
   text-decoration: underline;
 }
 
+/* Style Delite conformation page */
 
+.delete-booking-container {
+  max-width: 30%;
+  margin: 0 auto;
+  padding: 3%;
+  background-color: #fff;
+  border-radius: 2%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-heading {
+  font-size: 150%;
+  margin-bottom: 7%;
+}
+
+.delete-message {
+  font-size: 150%;
+  margin-bottom: 7%;
+}
+
+.delete-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.btn-delete {
+  background-color: #FF6A6A;
+  color: #fff;
+  border: none;
+  padding: 0,5% 6%;
+  font-size: 100%;
+  border-radius: 8%;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #FF6A6A;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 0,5% 6%;
+  font-size: 100%;
+  border-radius: 8%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
 /* Footer */
 
 footer {
