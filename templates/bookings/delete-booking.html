@@ -1,3 +1,4 @@
+{% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
 <h2>Confirm Deletion</h2>
@@ -6,7 +7,9 @@
 <form method="post">
     {% csrf_token %}
     <div class="form-group">
-        <input type="submit" class="btn btn-danger" value="Yes, delete">
+        <input type="submit" class="btn btn-delete" value="Yes, delete">
         <a href="{% url 'profile' %}" class="btn btn-secondary">Cancel</a>
     </div>
 </form>
+
+{% endblock%}

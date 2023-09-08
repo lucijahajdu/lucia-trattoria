@@ -6,6 +6,7 @@ from .forms import BookingForm
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 #def home(request):
 #    return render(request, 'index.html')
@@ -119,13 +120,25 @@ class ProfileView(LoginRequiredMixin, TemplateView):
 class EditBooking(generic.UpdateView):
     model = Booking
     template_name = 'bookings/edit-booking.html'
-    success_url = '../{id}'
     form_class = BookingForm
 
+    def form_valid(self, form):
+        self.object = form.save()
+        messages.success(self.request, 'Your change of table reservation was successful.')
+        return super().form_valid(form)
+
     def get_success_url(self):
-        return reverse_lazy('home', args=[str(self.object.id)])
+        return reverse_lazy('profile')
 
 class DeleteBooking(generic.DeleteView):
     model = Booking
     template_name = 'bookings/delete-booking.html'
-    success_url = reverse_lazy('profile')  # Redirect to the list view after deletion
+    success_url = reverse_lazy('profile')
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Your reservation is deleted.')
+        return super().delete(request, *args, **kwargs)
+    
+    
+
+    
