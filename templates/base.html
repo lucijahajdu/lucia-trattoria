@@ -34,25 +34,28 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><img src="https://res.cloudinary.com/dcdxpqmxa/image/upload/v1694169780/logo_i1y9nm.png" alt="logo"></a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><img
+                                src="https://res.cloudinary.com/dcdxpqmxa/image/upload/v1694169780/logo_i1y9nm.png"
+                                alt="logo"></a>
                     </li>
-                    <li class="nav-item text-dark" >
+                    <li class="nav-item text-dark">
                         <a class="nav-link " href="{% url 'profile' %}">My Profile</a>
                     </li>
                     <li class="nav-item text-dark">
                         <a class="nav-link" href="{% url 'booking_list' %}">Book a table</a>
                     </li>
-
+                </ul>
+                <ul class="navbar-nav my-2 my-sm-0">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-success" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="btn btn-success" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link btn btn-success" href="{% url 'account_signup' %}">Register</a>
+                        <a class=" btn btn-success" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-success" href="{% url 'account_login' %}">Login</a>
+                        <a class=" btn btn-success" id="btn-login" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -77,13 +80,34 @@
         {% endblock content %}
     </main>
 
-    <!-- Footer -->
+
+    <!-- Footer 
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
+    </footer> -->
+
+    <footer>
+        <div class="py-4 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-white font-weight-bold">
+                            <u>Cookies</u> | <u>Privacy Policy</u> | <u>General Terms and Condition</u>
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fab fa-twitter-square ms-3"></i>
+                        <i class="fab fa-instagram-square ms-3"></i>
+                        <i class="fab fa-youtube-square ms-3"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-</body> 
+
+</body>
 
 </html>
