@@ -2,29 +2,37 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
-
-<ul>
-  {% for booking in bookings %}
+<div class="booking-container">
+  <div class="booking-content">
+    <!--<ul>
+    {% for booking in bookings %}
     <li><a href="{% url 'edit-booking' booking.id %}">{{ booking.first_name }} {{ booking.last_name }}</a></li>
-  {% endfor %}
-</ul> 
-{% if booked %}
-<div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
-    Your table reservation was successful!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {% endfor %}
+  </ul> -->
+    {% if booked %}
+    <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
+      Your table reservation was successful!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% else %}
+    {% if user.is_authenticated %}
+
+    <h3>Please fill in the form to reserve a table</h3>
+
+    <form method="post" class="booking-form">
+      {{ booking_form | crispy }}
+      {% csrf_token %}
+      <button type="submit" class="btn btn-success btn-lg">Confirm reservation</button>
+    </form>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="booking-photo">
+    <img src="https://res.cloudinary.com/dcdxpqmxa/image/upload/v1694169840/reserve-table_krby0r.png"
+      alt="Restaurant Photo">
+  </div>
+
 </div>
-{% else %}
-{% if user.is_authenticated %}
-
-<h3>Please fill in the form to reserve a table</h3>
-
-<form method="post" style="margin-top: 3em;">
-    {{ booking_form | crispy }}
-    {% csrf_token %}
-    <button type="submit" class="btn btn-signup btn-lg">Confirm reservation</button>
-</form>
-{% endif %}
-{% endif %}
 
 
 {% endblock %}

@@ -1,5 +1,34 @@
+/*Navbar */
+
 #navbar {
   background-color: #FF6A6A;
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 0,8%; /* Adjust the spacing between items */
+}
+
+.navbar-nav .nav-item .nav-link.text-dark {
+  color: #000 !important;
+}
+
+/* Style the Logout, Register, and Login buttons */
+.btn-success {
+  background-color: #008A1E;
+  color: #fff;
+}
+
+/*Content section*/
+
+.content-text {
+  font-size: 180%;
+  margin: 8% 0;
+  padding: 0 5%;
 }
 
 .noMargin {
@@ -36,9 +65,79 @@
   width: 100%;
 }
 
-/* Signup form*/
+/* Signup button*/
 
 .btn-signup:hover,
 .btn-signup:active {
   background-color: #008A1E;
   color: #fff; }
+
+
+/* Apply styles to the booking container */
+.booking-container {
+  display: flex; /* Arrange children horizontally */
+  justify-content: space-between; /* Create space between children */
+  align-items: center; /* Vertically center children */
+  max-width: 100%; 
+  background: #F6FFFB;
+  padding: 4%;
+}
+
+
+/* Apply styles to the booking photo */
+.booking-photo {
+  flex: 1; 
+  max-width: 40%;
+}
+
+.booking-photo img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Apply styles to the list 
+.booking-container ul {
+  list-style: none;
+  padding: 0;
+} */
+
+.booking-container ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Apply styles to the success alert */
+.alert-success {
+  background-color: #008A1E;
+  color: white;
+}
+
+/* Apply styles to the form container */
+.booking-form {
+  margin-top: 3%;
+  background: white;
+  padding: 7%;
+  border-radius: 2%;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.35);
+}
+
+/* Apply styles to the form labels */
+.booking-form label {
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #6C6C6C;
+}
+
+/* Apply styles to the submit button */
+.booking-form button {
+  background-color: #008A1E;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 1em;
+}
