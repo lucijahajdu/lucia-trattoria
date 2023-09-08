@@ -1,12 +1,31 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
-<h3>Edit reservation</h3>
+<div class="booking-container">
+  <div class="booking-content">
+    {% if booked %}
+    <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
+      Your table reservation was successful!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% else %}
+    {% if user.is_authenticated %}
 
-<form method="post" style="margin-top: 3em;">
-    {{ form | crispy }}
-    {% csrf_token %}
-    <button type="submit" class="btn btn-signup btn-lg">Save Changes</button>
-</form>
+    <h3>Please edit your reservation</h3>
+
+    <form method="post" class="booking-form">
+      {{ form | crispy }}
+      {% csrf_token %}
+      <button type="submit" class="btn btn-success btn-lg">Save Changes</button>
+    </form>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="booking-photo">
+    <img src="https://res.cloudinary.com/dcdxpqmxa/image/upload/v1694169840/reserve-table_krby0r.png"
+      alt="Restaurant Photo">
+  </div>
+
+</div>
 
 {% endblock %}

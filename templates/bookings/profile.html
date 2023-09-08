@@ -1,14 +1,24 @@
 <!-- profile.html -->
 {% extends 'base.html' %}
 {% block content %}
-<h2>My Profile</h2>
-<ul>
-    {% for booking in bookings %}
-        <li>
-            Reservation for {{ booking.date|date:"F j, Y" }} at {{ booking.time|time:"g:i A" }}
-            <a href="{% url 'edit-booking' booking.id %}">Edit</a>
-            <a href="{% url 'delete-booking' booking.id %}">Delete</a>
+<div class="profile-container">
+    <h3 class="profile-heading">My Profile</h3>
+    <ul class="reservation-list">
+        {% for booking in bookings %}
+        <li class="reservation-item">
+            <span class="reservation-details">
+                Reservation for {{ booking.first_name }} {{ booking.last_name }}
+                <br>
+                Date: {{ booking.date|date:"F j, Y" }}
+                <br>
+                Time:{{ booking.time|time:"g:i A" }}
+            </span>
+            <div class="reservation-actions">
+                <a href="{% url 'edit-booking' booking.id %}">Edit</a>
+                <a href="{% url 'delete-booking' booking.id %}">Delete</a>
+            </div>
         </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
