@@ -1,15 +1,18 @@
 from .models import Booking
-from django import  forms
+from django import forms
 
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ('guests', 'date', 'time', 'first_name', 'last_name', 'email', 'requirements')
+        fields = (
+            'guests', 'date', 'time',
+            'first_name', 'last_name', 'email', 'requirements'
+            )
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'}),
         }
-    
+
     time_choices = [
         ('16:00', '04:00 PM'),
         ('17:00', '05:00 PM'),
@@ -23,9 +26,3 @@ class BookingForm(forms.ModelForm):
         choices=time_choices,
         widget=forms.Select(attrs={'class': 'form-control'}),
     )
-
-
-
-
-
-

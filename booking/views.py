@@ -11,7 +11,7 @@ from django.contrib import messages
 
 class HomeView(View):
 
-    def get(self,request):
+    def get(self, request):
         return render(request, 'index.html')
 
 
@@ -61,9 +61,11 @@ class ProfileView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         if self.request.user.is_authenticated:
-            context['bookings'] = Booking.objects.filter(user=self.request.user)
+            context['bookings'] = Booking.objects.filter(
+                user=self.request.user
+                )
         else:
-            context['bookings'] = None  
+            context['bookings'] = None
         return context
 
 
@@ -74,11 +76,13 @@ class EditBooking(generic.UpdateView):
 
     def form_valid(self, form):
         self.object = form.save()
-        messages.success(self.request, 'Your change of table reservation was successful.')
+        messages.success(
+            self.request, 'Your change of table reservation was successful.')
         return super().form_valid(form)
 
     def get_success_url(self):
         return reverse_lazy('profile')
+
 
 class DeleteBooking(generic.DeleteView):
     model = Booking

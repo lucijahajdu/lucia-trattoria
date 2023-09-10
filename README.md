@@ -26,13 +26,9 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
    
 * [Testing](#Testing)<a name="Testing"></a>
    * [Code Validation](#Code_Validation)<a name="Code Validation"></a>
-   * [Lighthouse](#Lighthouse)<a name="Lighthouse"></a>
    * [Test cases](#Test_cases)<a name="Test cases"></a>
-   * [Fixed bugs](#Fixed_bugs)<a name="Fixed bugs"></a>
    * [Supported screens and browsers](#Supported_screens_and_browsers)<a name="Test cases"></a>
 * [Deployment](#Deployment)<a name="Deployment"></a>
-  * [Via gitpod](#Via_gitpod)<a name="Via gitpod"></a>
-  * [Via github pages](#Via_github_pages)<a name="Via github pages"></a>
 * [Credits](#Credits)<a name="Credits"></a>
   * [Content](#Content)<a name="Content"></a>
   * [External sources](#External_sources)<a name="External sources"></a>
@@ -108,11 +104,6 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 ### Delete Booking ###
 
 ![Screenshot of Delete Booking message](media/images/deletemessage.png)
-
-## Future Features ##
-
-
-
 
 ## Wireframes ##
 
@@ -202,8 +193,8 @@ For UX Design planing of the aplication Figma was used.
   * No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/ "W3C Validator").
 * CSS
   * No errors were found when passing through the official [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/ "Jigsaw W3 Validator").
-* JS Validator 
-  * No errors were found when passing through the official [JSHint Code Quality](https://jshint.com/ "JS hint").
+* CI Python Linter(pep8)
+  * No errors were found when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/ "CI Python Linter").
 * Accessibility 
   * The chosen colours and fonts are easy to read and is accessible when running it through lighthouse in devtools.
 
@@ -211,10 +202,6 @@ For UX Design planing of the aplication Figma was used.
  
  ### Test cases ###
  All requirements are fulfilled from the list mentioned above at the user stories section.
-
-
-
-### Fixed bugs ###
 
 ### Supported screens and browsers ###
 This website was tested in the following browsers: Google Chrome, Firefox and Microsoft Edge.
@@ -364,10 +351,8 @@ The website is responsive to multiple screen sizes.
 ## Credits ##
 
 ### Content ###
-
-
-
-
++ I followed materials from Code Instutute to build my project. I got a lot of help from Slack and my mentor. 
++ For Readme file I used idea from [this link](https://github.com/LewisCM14/restaurant-booking-app/blob/main/README.md#testing "On_this_link").
 ### External sources ###
 
 + [Stack Overflow](https://stackoverflow.com/ "Stack_Overflow")

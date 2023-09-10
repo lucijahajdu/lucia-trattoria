@@ -18,8 +18,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls), # The admin URL
+    path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('', include('booking.urls')), # This will route requests to the booking app
+    path('', include('booking.urls')),
     path('accounts/', include('allauth.urls')),
 ]
