@@ -1,8 +1,8 @@
 # Lucia Trattoria #
 ## About ##
-A restaurant booking system. 
+A restaurant booking app built using Django for Italian restaurant called Lucia Trattoria. The application allows user to register or login and make reservation of a table. The reservations can be viewed in My Profile area and then edited or delted by the user as required.
 
-![Screenshot of the website]()
+![Screenshot of the Home Page](media/images/homepage.png)
 
 ## Table of Contents ##
 * [About](#About)<a name="About"></a>
@@ -33,6 +33,18 @@ A restaurant booking system.
 
 
 ## User Stories ##
+* The main goal of the site is to allow registered users to make reservations of a table.
+* As a Site User I arrive on the home page so that I can find more information about the restaurant.
+* As a Site User I can register an account so that I can reserve a table.
+* As a Site User I get notified when booking was successful so that I can be sure that I booked my table.
+* As a Site User I can fill in all necessary information in a form so I can send reservation to the restaurant:
+  * fill in last name and first name
+  * select amount of guests
+  * select date and time of visit
+  * fill in email address
+  * fill in additional comments if necessary
+  * send reservation form
+* As a Site User I can edit and delete my reservation so that I can manage my bookings.
 
 ## Features ##
 ### Header ###
