@@ -7,18 +7,26 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 ## Table of Contents ##
 * [About](#About)<a name="About"></a>
 * [User Stories](#User_Stories)<a name="User_Stories"></a>
-* [Features](#Features)<a name="Features"></a>
-  * [Header](#Header)<a name="Header"></a>
-  * [Visual appereance](#Visual_appereance)<a name="Visual_appereance"></a>
-  * [Footer](#Footer)<a name="Footer"></a>
-* [Future Features](#Future_Features)<a name="Future Features"></a>
-* [Typography and Color Scheme](#Typography_and_Color_Scheme)<a name="Typography and Color Scheme "></a>
+* [Design](#Design)<a name="Design"></a>
+  * [Color Scheme](#Color_Scheme)<a name="Color Scheme"></a>
   * [Typography](#Typography)<a name="Typography"></a>
-  * [Color Scheme](#Color_Scheme)<a name="Color Scheme "></a>
+  * [Imagery](#imagery)<a name="Imagery"></a>
+  * [Layout](#Layout)<a name="Layout"></a>
+* [Database Schema](#Database_schema)<a name="Database"></a>
+* [Features](#Features)<a name="Features"></a>
+  * [Home Page](#Home_page)<a name="Home Page"></a>
+  * [Navigation](#Navigation)<a name="Navigation"></a>
+  * [Footer](#Footer)<a name="Footer"></a>
+  * [User Creation](#User_creation)<a name="User Creation"></a>
+  * [Booking Form](#Booking_Form)<a name="Booking Form"></a>
+  * [My Profile](#My_profile)<a name="My Profile "></a>
+* [Future Features](#Future_features)<a name="Future Features"></a>
 * [Wireframes](#Wireframes )<a name="Wireframes"></a>
 * [Technology](#Technology)<a name="Technology "></a>
+   
 * [Testing](#Testing)<a name="Testing"></a>
    * [Code Validation](#Code_Validation)<a name="Code Validation"></a>
+   * [Lighthouse](#Lighthouse)<a name="Lighthouse"></a>
    * [Test cases](#Test_cases)<a name="Test cases"></a>
    * [Fixed bugs](#Fixed_bugs)<a name="Fixed bugs"></a>
    * [Supported screens and browsers](#Supported_screens_and_browsers)<a name="Test cases"></a>
@@ -46,41 +54,146 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
   * send reservation form
 * As a Site User I can edit and delete my reservation so that I can manage my bookings.
 
+## Design ##
+ + ### Color Scheme ###
+  * Selection of colors:
+- ![#fff](https://placehold.co/15x15/fff/fff.png) `#fff`
+- ![#000](https://placehold.co/15x15/000/000.png) `#000`
+- ![#008A1E](https://placehold.co/15x15/008A1E/008A1E.png) `#008A1E`
+- ![#F6FFFB](https://placehold.co/15x15/F6FFFB/F6FFFB.png) `#F6FFFB`
+- ![#FF6A6A](https://placehold.co/15x15/FF6A6A/FF6A6A.png) `#FF6A6A`
+ + ### Typography ###
+ * The chosen font for the project is Roboto and Lato. I chose this font as it provided a clean and elegant look.
+ + ### Imagery ###
+ + ### Layout ###
+ The app is built using a multi-page layout, with the navigation bar and footer present on every page. The navigation section is broken down into sections which can be navigated to from the dropdown menu in the navbar or from the buttons on each sections page.
+
+## Database Schema ##
+
+![Screenshot of Database Schema](media/images/database%20scheme.png)
+
 ## Features ##
-### Header ###
+ 
+### Home Page ###
 
+![Screenshot of Database Schema](media/images/homepage.png)
 
-### Visual appereance ###
+### Navigation ###
 
+![Screenshot of Navigation](media/images/navigation.png)
+
+![Screenshot of Navigation on mobile](media/images/navigation.mobile.png)
+ 
 
 ### Footer ###
 
+![Screenshot of Footer](media/images/footer.png)
+
+### User Creation ###
+ * User creation uses the allauth package to collect the necessary information needed by the company for account creation. Once an account is created the email and password set are used as the login credentials.
+
+
+### Booking Form ###
+
+![Screenshot of Booking Form](media/images/booking%20form.png)
+
+### My Profile ###
+
+![Screenshot of My Profile](media/images/myprofile.png)
+
+### Edit Booking ###
+
+![Screenshot of Edit Screen](media/images/editmobil.png)
+
+### Delete Booking ###
+
+![Screenshot of Delete Booking message](media/images/deletemessage.png)
 
 ## Future Features ##
 
-
-## Typography and Color Scheme ##
-
-### Typography ###
-
-
-### Color Scheme ###
 
 
 
 ## Wireframes ##
 
-![Wireframes]()
+For UX Design planing of the aplication Figma was used.
+
+![Wireframes](media/images/figma.png)
 
 ## Technology ##
-* Used languages: [HTML](https://sv.wikipedia.org/wiki/HTML5 "HTML"), [CSS](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "CSS"), [JavaScript](https://sv.wikipedia.org/wiki/Cascading_Style_Sheets "Javascript").
-* Wireframe was made with [Figma](https://www.figma.com/ "Figma").
-* GitPod was used for writing the codes.
-* Github was used to save and store files for the website.
-* Chrome Dev Tools was used to modify website.
-* [Google Fonts](https://fonts.google.com/ "Google Fonts") was used to import the fonts used on the website.
-* [Font Awesome](https://fontawesome.com/ "Font Awesome") was used to for the iconography on the website.
-* Responsive Screenshot was made wit [Am I Responsive](https://ui.dev/amiresponsive "Am I Responsive")
+
++ ## Languages Used ##
+
+  * HTML
+  * CSS
+  * JAVASCRIPT
+  * PYTHON
+  * MARKDOWN
+
+ + ## Frameworks & Toolkits ##
+  * [Django 3.2](https://www.djangoproject.com/download/).
+        * Python based web framework, used to build the application.
+    
+  * [Bootstrap](https://getbootstrap.com/).
+        * A front-end open source toolkit, used across the application.
+    
+  * [Font Awesome](https://fontawesome.com/).
+        * Icon set and toolkit used across the application.
+
+ + ## DBMS ##
+    
+  * [PostgreSQL](https://www.postgresql.org/).
+      * The relational database management system used.
+
+ + ## Cloud Services ##
+
+  * [Heroku](https://id.heroku.com/login).
+      * Used to deploy my project.
+
+  * [Cloudinary](https://cloudinary.com/).
+      * A cloud-based image and video management service. Used due to Heroku using an ephemeral file system. 
+
+ + ## Server ##
+
+  * [Gunicorn](https://gunicorn.org/).
+      * The server used to run Django on Heroku.
+
++ ## Version Control ##
+    
+  * Git.
+    * Git was used for version control by utilizing the GitPod terminal to commit to Git and Push to GitHub.
+
+  * [GitHub](https://github.com/).
+    * GitHub is used to store the projects code after being pushed from Git.
+    
+  * [Gitpod](https://www.gitpod.io/docs/).
+     * The IDE used to build the project.
+
+ + ## Libraries, Packages and Applications ##
+
+  * [dj_database_url](https://pypi.org/project/dj-database-url/).
+      * A PostgreSQL supporting library. Allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+    
+  * [pyscopg2](https://www.psycopg.org/docs/).
+      * PostgreSQL database adapter for the Python programming language.
+    
+  * [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/).
+      * a Django package that facilitates integration with Cloudinary.
+    
+  * [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html).
+      * Used for creation and maintenance of user accounts.
+    
+  * [crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html).
+      * Used for rendering the booking form in the browser.
+    
+ 
+ + ## Programs ##
+
+  * Slack.
+      * Code Institutes Slack workspace used for help during my project.
+    
+  * Figma 
+      * Used to create the wire frames during the development process.
 
 ## Testing ##
 
@@ -94,7 +207,7 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 * Accessibility 
   * The chosen colours and fonts are easy to read and is accessible when running it through lighthouse in devtools.
 
- ![Accessibility in Lighthouse]()
+ ![Accessibility in Lighthouse](media/images/Lighthous.png)
  
  ### Test cases ###
  All requirements are fulfilled from the list mentioned above at the user stories section.
@@ -109,17 +222,144 @@ The website is responsive to multiple screen sizes.
 
 ## Deployment ##
 
-### Via gitpod ###
-+ Repository in Github was created and named rock-paper-scissors-lizard-spock. The template Code-Institute-Org/gitpod-full-template was used.
-+ Tapping on the green "gitpod" button Gitpod is open. 
-+ To run HTML, CSS and Javascript type: python3 -m http.server.
-+ A blue button should appear to click: Open Browser.
-+ To save our code type git add ., git commit -m "" and git push to push our code to the GitHub
-### Via github pages ###
-+ In the GitHub repository, navigate to the Settings tab
-+ On the right side of the page push Pages
-+ From the source section drop-down menu, select the Master Branch
-+ Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- The site is deployed via [Heroku](https://heroku.com/). The steps to deploy are as follows:
+
+     
+    *Ensure all requirements for the project are added to the requirements.txt file prior to deployment. The command **pip3 freeze --local > requirements.txt** can be ran in the terminal to do this.*
+
+    *It is also assumed that the Django project is setup as intended, necessary dependencies installed with all apps required added to the INSTALLED_APPS variable within settings.py. For this project the booking app is all that is required.*
+
+    * STAGE ONE - Create a New App in Heroku
+
+        1: From the dashboard on Heroku, select New and then Create new app.
+        
+        2: Enter an individual app name into the text box, select a relevant region from the dropdown and then press Create app.
+        
+        3: A Heroku app has now been created.
+    
+    ---
+    
+    * STAGE TWO - Add a Database
+
+        1: Navigate to the resources tab for the app that has just been created.
+
+        2: In the Add-Ons section, search for the Heroku Postgres add on and submit an order form.
+        
+        3: Select the Settings tab for the app.
+
+        4: Reveal Config Vars and copy the DATABASE_URL string provided.
+
+        5: Create a env.py file within the project and use the copied string to create a DATABASE_URL environment variable. The Python OS module will be required for this.
+
+        *The env.py file is used to protect keys which should only be viewed by the developer. This file will not be pushed to GutHub for public display.*
+
+    ---
+    
+    * STAGE THREE - Create a SECRET_KEY
+
+        1: Within the env.py file, create a SECRET_KEY environment variable. The string for this variable is decided by the developer.
+
+        2: On the settings tab of the Heroku app, reveal config vars and add the SECRET_KEY variable along with the corresponding string.
+
+    ---
+    
+    * STAGE FOUR - Update the settings.py file
+
+        1: Import dj_database_url and env.py into the settings.py file within the project.
+
+            import dj_database_url
+            if os.path.isfile('env.py'):
+                import env
+
+        2: Update the default SECRET_KEY variable provided by Django to the SECRET_KEY environment variable.
+
+            SECRET_KEY = os.environ.get('SECRET_KEY')
+
+        3: Using an if/else statement update the DATABASES dictionary for the deployed project to use the DATABASE_URL environment variable, the dj_database_url library is utilized here.
+
+            if development:
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.sqlite3',
+                        'NAME': BASE_DIR / 'db.sqlite3',
+                    }
+                }
+            else:
+                DATABASES = {
+                    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+        
+        *The database for developing the project remains as the sqlite one provided*
+
+        4: Preform a migration.
+
+        *The Heroku database is now being used as the backend, within the resources tab of the app, the Heroku Postgres link will bring up a window demonstrating this.*
+
+    ---
+
+    * STAGE FIVE - Connect app to Cloudinary
+
+    
+        1: On the Cloudinary website, copy the API environment variable string.
+
+        2: Within the projects env.py file create a CLOUDINARY_URL environment variable equal to this copied string.
+
+        3: Within the Heroku app, on the settings tab, update the config vars to contain this variable.
+
+       
+        4: Within the settings.py file on the project, under INSTALLED_APPS, 'cloudinary_storage' and 'cloudinary' must be added.
+
+        5: Django must then be told to use Cloudinary to store media and static files, this is done by adding the below variables to the relevant section of the settings.py file:
+            
+            STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+            STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+            STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+            MEDIA_URL = '/media/'
+            DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+        
+        *The app is now linked to Cloudinary*
+    
+    ---
+     
+    * STAGE SIX - Tell Django where the templates are stored
+
+        1: Under the BASE_DIR on settings.py, add in the below templates directory. 
+        
+            TEMPLATES_DIR =  os.path.join(BASE_DIR, 'templates')
+        
+        2: Then within the TEMPLATES setting, update the DIRS key to point towards this variable.
+
+            'DIRS': [TEMPLATES_DIR]
+    
+    ---
+    
+    * STAGE SEVEN - Update ALLOWED_HOSTS
+
+  
+    ---
+    
+    * STAGE EIGHT - Create a Procfile
+
+        1: Create a Procfile at the top level of the directory.
+
+        2: Within this file, declare the below command. This command ensures gunicorn is used as the web server.
+
+            web: gunicorn trattoria.wsgi
+        
+        *Add, commit and push to the repository at this point*
+    
+    ---
+    
+    * STAGE NINE - Connect the GitHub repository to the Heroku App
+
+        1: Within the Deploy tab on the Heroku app, choose GitHub as the deployment method.
+
+        2: Search for the correct repository and connect.
+
+        3: At the bottom of the deployment section there is an option to chose which branch to deploy. Chose the main branch and allow the build log to complete.
+
+        4: Once complete, chose to allow automatic deployment from here onwards.
+
 
 ## Credits ##
 
