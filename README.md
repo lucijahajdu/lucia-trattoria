@@ -1,6 +1,6 @@
 # Lucia Trattoria #
 ## About ##
-A restaurant booking app built using Django for Italian restaurant called Lucia Trattoria. The application allows user to register or login and make reservation of a table. The reservations can be viewed in My Profile area and then edited or delted by the user as required.
+A restaurant booking app built using Django for Italian restaurant called Lucia Trattoria. The application allows user to register and login and make reservation of a table. The reservations can be viewed in My Profile area and then edited or deleted by the user as required.
 
 ![Screenshot of the Home Page](media/images/homepage.png)
 
@@ -12,22 +12,21 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
   * [Typography](#Typography)<a name="Typography"></a>
   * [Imagery](#imagery)<a name="Imagery"></a>
   * [Layout](#Layout)<a name="Layout"></a>
-* [Database Schema](#Database_schema)<a name="Database"></a>
+* [Database Schema](#Database_schema)<a name="Database Schema"></a>
 * [Features](#Features)<a name="Features"></a>
   * [Home Page](#Home_page)<a name="Home Page"></a>
   * [Navigation](#Navigation)<a name="Navigation"></a>
   * [Footer](#Footer)<a name="Footer"></a>
   * [User Creation](#User_creation)<a name="User Creation"></a>
   * [Booking Form](#Booking_Form)<a name="Booking Form"></a>
-  * [My Profile](#My_profile)<a name="My Profile "></a>
-* [Future Features](#Future_features)<a name="Future Features"></a>
+  * [My Profile](#My_profile)<a name="My Profile"></a>
 * [Wireframes](#Wireframes )<a name="Wireframes"></a>
 * [Technology](#Technology)<a name="Technology "></a>
    
 * [Testing](#Testing)<a name="Testing"></a>
    * [Code Validation](#Code_Validation)<a name="Code Validation"></a>
    * [Test cases](#Test_cases)<a name="Test cases"></a>
-   * [Supported screens and browsers](#Supported_screens_and_browsers)<a name="Test cases"></a>
+   * [Supported screens and browsers](#Supported_screens_and_browsers)<a name="Suported screens and browsers"></a>
 * [Deployment](#Deployment)<a name="Deployment"></a>
 * [Credits](#Credits)<a name="Credits"></a>
   * [Content](#Content)<a name="Content"></a>
@@ -41,7 +40,7 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 * As a Site User I arrive on the home page so that I can find more information about the restaurant.
 * As a Site User I can register an account so that I can reserve a table.
 * As a Site User I get notified when booking was successful so that I can be sure that I booked my table.
-* As a Site User I can fill in all necessary information in a form so I can send reservation to the restaurant:
+* As a Site User I can fill in all necessary information in a form so I can submit reservation to the restaurant:
   * fill in last name and first name
   * select amount of guests
   * select date and time of visit
@@ -62,7 +61,7 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
  * The chosen font for the project is Roboto and Lato. I chose this font as it provided a clean and elegant look.
  + ### Imagery ###
  + ### Layout ###
- The app is built using a multi-page layout, with the navigation bar and footer present on every page. The navigation section is broken down into sections which can be navigated to from the dropdown menu in the navbar or from the buttons on each sections page.
+ The app is built using a multi-page layout, with the navigation bar and footer present on every page. On the header user can navigate to differenet sections in the application, such a homepage (tap logo), My profile, Book a Table or Log in/Register.
 
 ## Database Schema ##
 
@@ -86,7 +85,7 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 ![Screenshot of Footer](media/images/footer.png)
 
 ### User Creation ###
- * User creation uses the allauth package to collect the necessary information needed by the company for account creation. Once an account is created the email and password set are used as the login credentials.
+ * User creation uses the allauth package to collect the necessary information needed by the company for account creation. Once an account is created the email and password are used as the login credentials.
 
 
 ### Booking Form ###
@@ -107,7 +106,7 @@ A restaurant booking app built using Django for Italian restaurant called Lucia 
 
 ## Wireframes ##
 
-For UX Design planing of the aplication Figma was used.
+Figma was used for UX Design planning of the application.
 
 ![Wireframes](media/images/figma.png)
 
@@ -184,7 +183,7 @@ For UX Design planing of the aplication Figma was used.
       * Code Institutes Slack workspace used for help during my project.
     
   * Figma 
-      * Used to create the wire frames during the development process.
+      * Used to create the wire-frames during the development process.
 
 ## Testing ##
 
