@@ -33,7 +33,7 @@ DEBUG = 'DEV' in os.environ
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    'lucia-trattoria.herokuapp.com',
+    'lucia-trattoria-0993749d196f.herokuapp.com',
     'localhost',
     '8000-lucijahajdu-luciatratto-pu6lbs8toef.ws-eu104.gitpod.io'
     ]
