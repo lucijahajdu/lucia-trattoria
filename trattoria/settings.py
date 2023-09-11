@@ -28,12 +28,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    'https://lucia-trattoria-0993749d196f.herokuapp.com/',
+    'lucia-trattoria.herokuapp.com',
     'localhost',
     '8000-lucijahajdu-luciatratto-pu6lbs8toef.ws-eu104.gitpod.io'
     ]
